@@ -13,6 +13,8 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
+  belongs_to :director, inverse_of: "filmography"
+
   def director
     key = self.director_id
 
